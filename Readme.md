@@ -5,7 +5,15 @@
 ## The usage of the python script 
 `usage- python3 tax_stats.py --file1 </path/to/kraken_report> --file2 </path/to/bracken report> --file3 </path/to/fastq file>`
 
+## Kraken2 brief-
+
+ Kraken2 is a k-mer based taxonomic classification system, which assigns taxonomic labes to DNA sequences. It functions based on exact k-mer matches- the classifier matches each k-mer within a query sequence to the lowest common ancestor (LCA) of all genomes containing the given k-mer. Kraken2 actually stores minimizers (l-mers) of each k-mer. The length of each l-mer must be ≤ the k-mer length. Each k-mer is treated by Kraken 2 as if its LCA is the same as its minimizer's LCA. Only minimizers of the k-mers in the query sequences are used as database queries. Similarly, only minimizers of the k-mers in the reference sequences in the database's genomic library are stored in the database. All k-mers are considered to have the same LCA as their minimizer's database LCA value.
+
+
 ## Brief explanation about the various fields in Kraken2 and Bracken report
+
+- phanta_kraken2.report
+
 
 
 
