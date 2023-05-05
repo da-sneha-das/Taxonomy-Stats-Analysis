@@ -7,7 +7,8 @@
 
 ## Kraken2 brief-
 
- Kraken2 is a k-mer based taxonomic classification system, which assigns taxonomic labels to DNA sequences. It functions based on exact k-mer matches- the classifier matches each k-mer within a query sequence to the lowest common ancestor (LCA) of all genomes containing the given k-mer. Kraken2 actually stores minimizers (l-mers) of each k-mer. The length of each l-mer must be ≤ the k-mer length. Each k-mer is treated by Kraken 2 as if its LCA is the same as its minimizer's LCA. Only minimizers of the k-mers in the query sequences are used as database queries. Similarly, only minimizers of the k-mers in the reference sequences in the database's genomic library are stored in the database. All k-mers are considered to have the same LCA as their minimizer's database LCA value.
+ Kraken2 is a k-mer based taxonomic classification system, which assigns taxonomic labels to DNA sequences. It functions based on exact k-mer matches- the classifier matches each k-mer within a query sequence to the lowest common ancestor (LCA) of all genomes containing the given k-mer. Kraken2 actually stores minimizers (l-mers) of each k-mer. The length of each l-mer must be ≤ the k-mer length. Each k-mer is treated by Kraken 2 as if its LCA is the same as its minimizer's LCA. Only minimizers of the k-mers in the query sequences are used as database queries. Similarly, only minimizers of the k-mers in the reference sequences in the database's genomic library are stored in the database. All k-mers are considered to have the same LCA as their minimizer's database LCA value. By default, the values of 
+ and are 35 and 31 respectively.
 
 
 ## Brief explanation about the various fields in Kraken2 and Bracken report
@@ -16,6 +17,12 @@
 
 ![Screenshot 2023-05-05 150954](https://user-images.githubusercontent.com/129862776/236425422-31f2a040-931a-4f9b-8ba8-89d2c4368f19.jpg)
 
-
-
-
+- The above is an example of standard Kraken2 sample report format. It is tab-delimited with one line per taxon.
+- The fields of the output, from left to right-
+1. Percentage of the fragments covered by the claded rooted at this taxon (Reads)
+2. Number of fragments covered by the clade rooted at this taxon
+3. Number of fragments assigned directly to this taxon
+4. A rank code, indicating (U)nclassified, (R)oot, (D)omain, (K)ingdom, (P)hylum, (C)lass, (O)rder, (F)amily, (G)enus, or (S)pecies. Taxa that are not at any of these 10 ranks have a rank code that is formed by using the rank code of the closest ancestor rank with a number indicating the distance from that rank. E.g., "G2" is a rank code indicating a taxon is between genus and species and the grandparent taxon is at the genus rank.
+5. NCBI taxonomic ID number
+6. Indented scientific name
+-By default, taxa with no reads assigned to (or under) them will not have any output produced.
