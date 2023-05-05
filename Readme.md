@@ -14,6 +14,6 @@
 
 - phanta_kraken2.report
 
-![Screenshot 2023-05-05 150816](https://user-images.githubusercontent.com/129862776/236424936-1f3f5449-a7be-4d16-887b-cb857f1bc78f.jpg)
+
 
 
