@@ -26,3 +26,7 @@
 5. NCBI taxonomic ID number
 6. Indented scientific name
 -By default, taxa with no reads assigned to (or under) them will not have any output produced.
+
+##Braken 
+- Bracken is a companion program to Kraken 1, KrakenUniq, or Kraken 2 While Kraken classifies reads to multiple levels in the taxonomic tree, Bracken allows estimation of abundance at a single level using those classifications (e.g. Bracken can estimate abundance of species within a sample).
+- Unclassified reads will not be included in the report.
