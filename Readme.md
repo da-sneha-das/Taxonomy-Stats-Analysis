@@ -32,5 +32,6 @@
 - Bracken is a companion program to Kraken 1, KrakenUniq, or Kraken 2 While Kraken classifies reads to multiple levels in the taxonomic tree, Bracken allows estimation of abundance at a single level using those classifications (e.g. Bracken can estimate abundance of species within a sample).
 - Unclassified reads will not be included in the report.
 - Format is similar to Kraken 2 report. Refer to [Bracken-report](https://github.com/jenniferlu717/Bracken#output-kraken-style-bracken-report)
+- If Kraken fails to identify a species (e.g., if the species was missing from the Kraken database), Bracken too will not identify that species.
 
 
